@@ -39,9 +39,49 @@ public class Main {
             System.out.println("Год " + year + ", численность населенеия составляет " + total);
         }
         System.out.println();
-        // Task
+        // Task 4
         System.out.println("Task 4");
         System.out.println();
 
+        int deposit = 15000;
+        double monthlyPercent = 0.07;
+        int totalAmount = 12_000_000;
+        int numberMonth = 0;
+        while (deposit <= totalAmount) {
+            deposit += deposit * monthlyPercent;
+            numberMonth++;
+            System.out.println("Месяц " + numberMonth + " - Василий накопил " + deposit);
+        }
+        System.out.println();
+        // Task 5
+        System.out.println("Task 5");
+        System.out.println();
+        int deposit5 = 15000;
+        double monthlyPercent5 = 0.07;
+        int totalAmount5 = 12_000_000;
+        int numberMonth5 = 0;
+        while (deposit5 <= totalAmount5) {
+            deposit5 += deposit5 * monthlyPercent5;
+            numberMonth5++;
+            if (numberMonth5 % 6 == 0) {
+                System.out.println("Месяц " + numberMonth5 + " - Василий накопил " + deposit5);
+            }
+        }
+        System.out.println();
+        // Task 6
+        System.out.println("Task 6");
+        System.out.println();
+        int deposit6 = 15000;
+        double monthlyPercent6 = 0.07;
+        int halfYear6 = 18;
+        int unitYears6 = 1;
+        int numberMonth6 = 0;
+        for (; unitYears6 <= halfYear6; unitYears6++) {
+            deposit6 = deposit6 * 6;
+            deposit6 += deposit6 * monthlyPercent6;
+
+            System.out.println("Полугодие " + unitYears6 + " - Василий накопил " + deposit6);
+        }
     }
 }
+
