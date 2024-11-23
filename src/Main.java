@@ -99,16 +99,17 @@ public class Main {
         // Task 8
         System.out.println("Task 8");
         System.out.println();
-        int cometPeriodYears = 79;
-        int doneCometPeriodYears = 2124;
-        while (cometPeriodYears < doneCometPeriodYears) {
-            cometPeriodYears++;
-            if (cometPeriodYears % 79 == 0 && cometPeriodYears >= 1896) {
-                System.out.println(cometPeriodYears);
+        int to = 2024 - 200;
+        int year = 0;
+        int after = 2024 + 100;
+        for (; year < after; year++) {
+            if (year % 79 == 0 && year > to) {
+                System.out.println(year);
             }
         }
     }
 }
+
 
 
 
