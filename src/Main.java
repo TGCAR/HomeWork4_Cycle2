@@ -48,7 +48,7 @@ public class Main {
         int totalAmount = 12_000_000;
         int numberMonth = 0;
         while (deposit <= totalAmount) {
-            deposit += deposit * monthlyPercent;
+            deposit += (int) (deposit * monthlyPercent);
             numberMonth++;
             System.out.println("Месяц " + numberMonth + " - Василий накопил " + deposit);
         }
@@ -61,7 +61,7 @@ public class Main {
         int totalAmount5 = 12_000_000;
         int numberMonth5 = 0;
         while (deposit5 <= totalAmount5) {
-            deposit5 += deposit5 * monthlyPercent5;
+            deposit5 = (int) (deposit5 + deposit5 * monthlyPercent5);
             numberMonth5++;
             if (numberMonth5 % 6 == 0) {
                 System.out.println("Месяц " + numberMonth5 + " - Василий накопил " + deposit5);
@@ -71,17 +71,48 @@ public class Main {
         // Task 6
         System.out.println("Task 6");
         System.out.println();
+        int accumulationTimeYear = 9;
         int deposit6 = 15000;
         double monthlyPercent6 = 0.07;
-        int halfYear6 = 18;
-        int unitYears6 = 1;
-        int numberMonth6 = 0;
-        for (; unitYears6 <= halfYear6; unitYears6++) {
-            deposit6 = deposit6 * 6;
-            deposit6 += deposit6 * monthlyPercent6;
-
-            System.out.println("Полугодие " + unitYears6 + " - Василий накопил " + deposit6);
+        int month6 = accumulationTimeYear * 12;
+        int unitHalfYears = 0;
+        int halfYears = 0;
+        while (unitHalfYears <= month6) {
+            deposit6 = (int) (deposit6 + deposit6 * monthlyPercent6);
+            unitHalfYears++;
+            if (unitHalfYears % 6 == 0) {
+                halfYears++;
+                System.out.println("Полугодие " + halfYears + " - Василий накопил " + deposit6);
+            }
+        }
+        System.out.println();
+        // Task 7
+        System.out.println("Task 7");
+        System.out.println();
+        int oneFriday = 5;
+        int month7 = 31;
+        while (oneFriday <= month7) {
+            System.out.println("Сегодня пятница, " + oneFriday + " -е число.Необходимо подготовить отчет");
+            oneFriday += 7;
+        }
+        System.out.println();
+        // Task 8
+        System.out.println("Task 8");
+        System.out.println();
+        int cometPeriodYears = 79;
+        int doneCometPeriodYears = 2124;
+        while (cometPeriodYears < doneCometPeriodYears) {
+            cometPeriodYears++;
+            if (cometPeriodYears % 79 == 0 && cometPeriodYears >= 1896) {
+                System.out.println(cometPeriodYears);
+            }
         }
     }
 }
+
+
+
+
+
+
 
